@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+:root{
+    --face: #3b5999;
+    --git: black;
+    --twit: #46c1f6;
+    --insta: #e1306c;
+    --youtu: #de463b;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(to right, rgb(24, 142, 134), rgb(35, 111, 78));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+} 
+.icon{
+    margin: 0 20px;
+    cursor: pointer;
+    position: relative;
+}
+.icon i{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  
+}
+.icon .label{
+    position: absolute;
+    background-color: aliceblue;
+    color: white;
+    font-size: 23px;
+    font-weight: 900px;
+    top:0;
+    left: 50%;
+    transform:translateX(-1000%) ;
+    padding: 10px 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* pointer-events: none; */
+    border-radius: 25px;
+    /* opacity: 0;  */
+}
+
+.icon .label:before{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width:15px;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+
+.icon i, .label{
+    transition: 0.9s;
+}
+.icon:hover .label{
+    opacity: 1;
+    pointer-events: auto;
+    top:-70px ;
+    transform:translateX(-50%) ;
+
+} 
+.icon:hover i{
+    color: white;
+}
+.face i:hover, .face .label, .face .label:before{
+    background-color:var(--face);
+}
+.git i:hover, .git .label, .git .label:before{
+    background-color:var(--git);
+}
+.twitt i:hover, .twitt .label, .twitt .label:before{
+    background-color:var(--twit);
+}
+.insta i:hover, .insta .label, .insta .label:before{
+    background-color:var(--insta);
+}
+.youtu i:hover, .youtu .label, .youtu .label:before{
+    background-color:var(--youtu);
+}
+
+
